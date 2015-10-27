@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Record Sounds View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pitch_Perfect__again_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RecordSoundsViewController" customModule="Pitch_Perfect__again_" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -31,7 +31,6 @@
                                 <state key="normal" image="Stop"/>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="stl-2V-4zb"/>
-                                    <segue destination="2TH-cb-lnQ" kind="show" id="tJn-hA-Q1g"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulI-Do-bTO">
@@ -71,6 +70,7 @@
                         <outlet property="recordButton" destination="ulI-Do-bTO" id="eFY-mM-8QV"/>
                         <outlet property="recordingInProgress" destination="SQa-cf-BEC" id="qxX-4T-uw0"/>
                         <outlet property="stopButton" destination="2pi-f1-MFp" id="pQv-s6-wwt"/>
+                        <segue destination="2TH-cb-lnQ" kind="show" identifier="stopRecording" id="1rf-p9-cf9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -97,7 +97,7 @@
                                     <action selector="playSlowAudio:" destination="2TH-cb-lnQ" eventType="touchUpInside" id="Tbr-Dq-wEV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cc8-Rs-DyQ">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cc8-Rs-DyQ">
                                 <rect key="frame" x="275" y="500" width="50" height="50"/>
                                 <animations/>
                                 <state key="normal" image="Stop"/>
@@ -125,6 +125,9 @@
                             <constraint firstItem="dxF-FQ-Ll0" firstAttribute="top" secondItem="8ax-Qt-5JR" secondAttribute="bottom" constant="50" id="yeX-yG-YKG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="stopButton" destination="Cc8-Rs-DyQ" id="g5s-xd-UXL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ta-V8-Hww" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

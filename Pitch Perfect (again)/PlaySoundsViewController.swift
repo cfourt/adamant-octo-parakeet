@@ -11,21 +11,17 @@ import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
 
+    @IBOutlet weak var stopButton: UIButton!
+    
     //making audioPlayer available throughout the file
-    var audioPlayer: AVAudioPlayer!
+    var audioPlayer:AVAudioPlayer!
+    var receivedAudio:RecordedAudio!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Get the url to the file movie_quote.mp3
-        if let url = NSBundle.mainBundle().URLForResource("movie_quote", withExtension: "mp3"){
-            audioPlayer = try! AVAudioPlayer(contentsOfURL: url)
-            audioPlayer.enableRate = true
-        }
-        else{
-            print("The path is empty.")
-        }
-        // Do any additional setup after loading the view.
+        audioPlayer = try! AVAudioPlayer(contentsOfURL: receivedAudio.filePathURL)
+        audioPlayer.enableRate = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -39,19 +35,24 @@ class PlaySoundsViewController: UIViewController {
         audioPlayer.currentTime = 0.0
         audioPlayer.rate = playRate
         audioPlayer.play()
+        stopButton.hidden = false
     }
 
     @IBAction func stopAudio(sender: UIButton) {
         audioPlayer.stop()
+        stopButton.hidden = true
     }
 
     @IBAction func playFastAudio(sender: UIButton) {
         playAudio(1.5)
+        
     }
     
     @IBAction func playSlowAudio(sender: UIButton) {
         playAudio(0.5)
     }
+    
+    
     /*
     // MARK: - Navigation
     
