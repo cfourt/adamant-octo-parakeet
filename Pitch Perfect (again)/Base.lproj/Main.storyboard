@@ -108,9 +108,17 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxF-FQ-Ll0">
                                 <rect key="frame" x="430" y="114" width="100" height="100"/>
                                 <animations/>
-                                <state key="normal" image="Chimpmunk"/>
+                                <state key="normal" image="Rabbit"/>
                                 <connections>
                                     <action selector="playFastAudio:" destination="2TH-cb-lnQ" eventType="touchUpInside" id="yEM-LZ-gP6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWL-vU-Xk0">
+                                <rect key="frame" x="70" y="345" width="100" height="100"/>
+                                <animations/>
+                                <state key="normal" image="Chipmunk"/>
+                                <connections>
+                                    <action selector="playChipmunkAudio:" destination="2TH-cb-lnQ" eventType="touchUpInside" id="LTf-R1-J3x"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -120,8 +128,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="dxF-FQ-Ll0" secondAttribute="trailing" constant="50" id="16r-RT-sRx"/>
                             <constraint firstItem="RRj-tz-VPz" firstAttribute="top" secondItem="8ax-Qt-5JR" secondAttribute="bottom" constant="50" id="2Jf-PY-bWP"/>
                             <constraint firstItem="RRj-tz-VPz" firstAttribute="leading" secondItem="AJy-VB-ooK" secondAttribute="leadingMargin" constant="50" id="Mab-7r-RPH"/>
+                            <constraint firstItem="sae-ye-Q0p" firstAttribute="top" secondItem="lWL-vU-Xk0" secondAttribute="bottom" constant="155" id="Sqf-ta-lyT"/>
                             <constraint firstItem="Cc8-Rs-DyQ" firstAttribute="centerX" secondItem="AJy-VB-ooK" secondAttribute="centerX" id="UOe-1j-9fM"/>
                             <constraint firstItem="sae-ye-Q0p" firstAttribute="top" secondItem="Cc8-Rs-DyQ" secondAttribute="bottom" constant="50" id="WbI-NQ-Vew"/>
+                            <constraint firstItem="lWL-vU-Xk0" firstAttribute="leading" secondItem="RRj-tz-VPz" secondAttribute="leading" id="v69-Yj-fLY"/>
                             <constraint firstItem="dxF-FQ-Ll0" firstAttribute="top" secondItem="8ax-Qt-5JR" secondAttribute="bottom" constant="50" id="yeX-yG-YKG"/>
                         </constraints>
                     </view>
@@ -154,8 +164,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Chimpmunk" width="100" height="100"/>
+        <image name="Chipmunk" width="100" height="100"/>
         <image name="Microphone" width="100" height="100"/>
+        <image name="Rabbit" width="100" height="100"/>
         <image name="Slow" width="100" height="100"/>
         <image name="Stop" width="50" height="50"/>
     </resources>
