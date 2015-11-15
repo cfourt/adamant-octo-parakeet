@@ -40,28 +40,26 @@ class PlaySoundsViewController: UIViewController {
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    
-    func playAudio(playRate: Float){
+    func resetAudio(){
         audioPlayer.stop()
         audioEngine.stop()
         audioEngine.reset()
         audioPlayer.currentTime = 0.0
+    }
+    
+    
+    func playAudio(playRate: Float){
+        resetAudio()
+        
         audioPlayer.rate = playRate
         audioPlayer.play()
         stopButton.hidden = false
     }
     
+    
     func playAudioWithVariablePitch(pitch: Float){
         
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine.reset()
+        resetAudio()
         
         let audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
@@ -91,7 +89,7 @@ class PlaySoundsViewController: UIViewController {
     }
 
     @IBAction func stopAudio(sender: UIButton) {
-        audioPlayer.stop()
+        resetAudio()
         stopButton.hidden = true
     }
 
