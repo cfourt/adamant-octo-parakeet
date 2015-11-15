@@ -62,7 +62,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "stopRecording"){
-            let playSoundsVC:PlaySoundsViewController = segue.destinationViewController as! PlaySoundsViewController
+            let playSoundsVC = segue.destinationViewController as! PlaySoundsViewController
             let data = sender as! RecordedAudio
             playSoundsVC.receivedAudio = data
         }
@@ -72,7 +72,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         // TODO: Save recorded audio
         if (flag){
             recordedAudio = RecordedAudio() //not sure what this line does at all
-            recordedAudio.filePathURL = recorder.url
+            recordedAudio.filePathUrl = recorder.url
                 //the name
             recordedAudio.title = recorder.url.lastPathComponent
             
