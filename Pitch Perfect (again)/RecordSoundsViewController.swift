@@ -26,6 +26,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     override func viewWillAppear(animated: Bool) {
         //hide stop button
         stopButton.hidden = true
+        recordingInProgress.text = "Tap to record"
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,10 +35,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
 
     @IBAction func recordAudio(sender: UIButton) {
-        //TODO: show text recording in progress
-        //TODO: record the user's voice
         
-        recordingInProgress.hidden = false
+        recordingInProgress.text = "Recording..."
         stopButton.hidden = false
         recordButton.enabled = false
         
@@ -69,15 +68,9 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
-        // TODO: Save recorded audio
         if (flag){
-            recordedAudio = RecordedAudio() //not sure what this line does at all
-            recordedAudio.filePathUrl = recorder.url
-                //the name
-            recordedAudio.title = recorder.url.lastPathComponent
+            recordedAudio = RecordedAudio(filePathUrl: recorder.url, title: recorder.url.lastPathComponent!)
             
-            
-            // ignoring adding "self." to the beginning
             performSegueWithIdentifier("stopRecording", sender: recordedAudio)
         } else{
             print("Recording was not successful")
@@ -88,7 +81,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     @IBAction func stopRecording(sender: UIButton) {
         print("stopped recording")
-        recordingInProgress.hidden = true
+        recordingInProgress.text = "Nice!"
         stopButton.hidden = true
         recordButton.enabled = true
         

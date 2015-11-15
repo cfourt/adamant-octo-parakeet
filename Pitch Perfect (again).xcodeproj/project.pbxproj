@@ -15,7 +15,6 @@
 		B30BFCB81BDC402F0065F7D4 /* Pitch_Perfect__again_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30BFCB71BDC402F0065F7D4 /* Pitch_Perfect__again_Tests.swift */; };
 		B30BFCC31BDC402F0065F7D4 /* Pitch_Perfect__again_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30BFCC21BDC402F0065F7D4 /* Pitch_Perfect__again_UITests.swift */; };
 		B30BFCD11BDC7D7B0065F7D4 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30BFCD01BDC7D7B0065F7D4 /* PlaySoundsViewController.swift */; };
-		B31DB9491BF7F5EF0092E93E /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B31DB9481BF7F5EF0092E93E /* movie_quote.mp3 */; };
 		B37D3DCA1BDF489A007061EB /* RecordedAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D3DC91BDF489A007061EB /* RecordedAudio.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +50,6 @@
 		B30BFCC21BDC402F0065F7D4 /* Pitch_Perfect__again_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pitch_Perfect__again_UITests.swift; sourceTree = "<group>"; };
 		B30BFCC41BDC402F0065F7D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B30BFCD01BDC7D7B0065F7D4 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
-		B31DB9481BF7F5EF0092E93E /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = movie_quote.mp3; path = "../Pitch Perfect Images/movie_quote.mp3"; sourceTree = "<group>"; };
 		B37D3DC91BDF489A007061EB /* RecordedAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordedAudio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,7 +81,6 @@
 		B30BFC961BDC402F0065F7D4 = {
 			isa = PBXGroup;
 			children = (
-				B31DB9481BF7F5EF0092E93E /* movie_quote.mp3 */,
 				B30BFCA11BDC402F0065F7D4 /* Pitch Perfect (again) */,
 				B30BFCB61BDC402F0065F7D4 /* Pitch Perfect (again)Tests */,
 				B30BFCC11BDC402F0065F7D4 /* Pitch Perfect (again)UITests */,
@@ -241,7 +238,6 @@
 			files = (
 				B30BFCAD1BDC402F0065F7D4 /* LaunchScreen.storyboard in Resources */,
 				B30BFCAA1BDC402F0065F7D4 /* Assets.xcassets in Resources */,
-				B31DB9491BF7F5EF0092E93E /* movie_quote.mp3 in Resources */,
 				B30BFCA81BDC402F0065F7D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
